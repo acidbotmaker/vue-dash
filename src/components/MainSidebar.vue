@@ -29,6 +29,15 @@ export default {
         {
           id: '1234274',
           name: 'f3e4fme eferver'
+        },
+        {
+          id: 'add-new', 
+          name: '+',
+          has_separator: true
+        },
+        {
+          id: 'search', 
+          name: 'O'
         }
       ]
     }
