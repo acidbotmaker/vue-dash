@@ -14,8 +14,8 @@ export default {
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 2px;
-  width: 60%;
+  height: 1px;
+  width: 50%;
   border-radius: 8px;
 }
 </style>
