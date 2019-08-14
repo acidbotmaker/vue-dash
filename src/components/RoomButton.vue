@@ -1,17 +1,31 @@
 <template>
-  <div class="room-button" draggable="true">
+  <div>
+    <separator v-if="room.has_separator" />
+    <div class="room-button" draggable="true">
       <div class="tooltip">{{room.name}}</div>
-      <p class="room-name">
+      <p :class="get_class_name">
         {{ get_initials }}
       </p>
     </div>
+  </div>
 </template>
 
 <script>
+import Separator from "./Separator";
+
 export default {
   name: "RoomButton",
+  components:{
+    Separator
+  },
   props: ["room"],
   computed: {
+    get_class_name(){
+      if(this.room.id == 'add-new' || this.room.id == 'search'){
+        return 'room-name room-control';
+      }
+      return 'room-name';
+    },
     get_initials(){
       const name_pieces = this.room.name.split(' ');
       let initials = '';
@@ -52,6 +66,9 @@ export default {
     justify-content: center;
 
     font-weight: 0.4em;
+  }
+  .room-control{
+    font-size: 36px;
   }
   .tooltip{
     display: none;
