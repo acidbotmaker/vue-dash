@@ -10,11 +10,11 @@ export default {
 
 <style>
 .separator{
-  background-color: #2f3136;
+  background-color: #797d88;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 1px;
+  height: 1.8px;
   width: 50%;
   border-radius: 8px;
 }

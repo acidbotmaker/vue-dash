@@ -1,13 +1,20 @@
 <template>
   <div class="room-container">
-
-    fef
+    <room-details />
+    <theatre />
   </div>
 </template>
 
 <script>
-export default {
+import RoomDetails from "./RoomDetails";
+import Theatre from "./Theatre";
 
+export default {
+  name: "Room",
+  components: {
+    RoomDetails,
+    Theatre
+  }
 }
 </script>
 
@@ -21,5 +28,15 @@ export default {
     width: calc(100% - 80px);
     height: 100%;
     overflow: hidden;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 </style>
